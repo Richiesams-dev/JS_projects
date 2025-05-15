@@ -6,7 +6,9 @@ const input = document.getElementById("input");
 document.addEventListener("DOMContentLoaded", loadItems);
 
 function loadItems() {
-    const savedItems = JSON.parse(localStorage.getItem("todoItems")) || [];
+    //     Gets stored to-do items from localStorage (browser storage).
+    
+    const savedItems = JSON.parse(localStorage.getItem("todoItems")) || []; // If no items exist, then set as an empty array [].
     list.innerHTML = ''; // Clear the list before loading
     
     savedItems.forEach((item, index) => {
