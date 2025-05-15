@@ -54,7 +54,7 @@ function createListItem(value, index) {
     itemContainer.appendChild(deleteButton);
     
     list.appendChild(itemContainer);
-    list.style.background = "grey";
+    list.style.background = "blue";
     
     deleteButton.onclick = function() {
         removeItem(index);
