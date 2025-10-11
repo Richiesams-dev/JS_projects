@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Watch</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h3>Stop Watch</h3>
-    <h1>00:00</h1>
-    <button onclick="startClock()">Start</button>
-    <button onclick="stopClock()">Stop</button>
-    <button onclick="resetClock()">Reset</button>
     <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <h3>Track your time with precision</h3>
+
+        <div class="time-display" id="display">00:00:00</div>
+
+        <div class="controls">
+            <button id="startBtn" onclick="startClock()">Start</button>
+            <button id="stopBtn" onclick="stopClock()">Stop</button>
+            <button id="resetBtn" onclick="resetClock()">Reset</button>
+            <button id="lapBtn" onclick="recordLap()">Lap</button>
+        </div>
+
+        <div class="laps">
+            <h4>Lap Times</h4>
+            <div id="lapTimes"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>
