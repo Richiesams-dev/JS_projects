@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palidrome Checker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
     <div id="container">
         <div class="div">
-            <h1>Palidrome Checker</h1>
+            <h1>Palindrome Checker</h1>
         </div>
-        <div class="value"></div>
         <div class="input-container">
-            <input id="input" type="text" placeholder="Type something">
+            <input id="input" type="text" placeholder="Type a word or phrase">
         </div>
         <button id="button">Check</button>
+        <div class="value" id="result">
+            Enter a word to check if it's a palindrome
+        </div>
+        <div class="info">
+            <p>A palindrome is a word, phrase, or sequence that reads the same backward as forward.</p>
+            <div class="examples">
+                <div class="example" onclick="fillExample('racecar')">racecar</div>
+                <div class="example" onclick="fillExample('A man a plan a canal Panama')">A man a plan a canal Panama</div>
+                <div class="example" onclick="fillExample('Madam')">Madam</div>
+                <div class="example" onclick="fillExample('Was it a car or a cat I saw')">Was it a car or a cat I saw</div>
+            </div>
+        </div>
     </div>
-    <script src="index.js"></script>
+
 </body>
 
 </html>

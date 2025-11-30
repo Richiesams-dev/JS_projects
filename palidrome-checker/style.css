@@ -1,48 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: blue;
-    /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 20px;
 }
 
 #container {
-    background-color: red;
-    max-width: 500px;
-    height: 500px;
-    border-radius: 25px;
-    justify-content: center;
-    margin-bottom: 20px;
-    box-shadow: 5px, 10px, red;
-    
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
 
-.div {
-    background-color: white;
-    max-width: 500px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    justify-content: center;
-    text-align: center;
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .input-container {
-    display: flex;
-    /* flex: 0 0 80%; */
-    background-color: white;
-    padding: 0;
-    /* max-width: 250px; */
-    align-self: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-input {
-    width: 250px;
+#input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-button {
-    background-color: white;
-    padding: 10px 100px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    font-weight: 800;
-    font-size: large;
+#input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+}
+
+#button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+  margin-bottom: 30px;
+}
+
+#button:hover {
+  background-color: #1a68e8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 117, 252, 0.5);
+}
+
+#button:active {
+  transform: translateY(1px);
+}
+
+.value {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.palindrome {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 2px solid #4caf50;
+}
+
+.not-palindrome {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #c62828;
+  border: 2px solid #f44336;
+}
+
+.info {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.example {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.example:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 500px) {
+  #container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #input {
+    font-size: 1rem;
+  }
 }
